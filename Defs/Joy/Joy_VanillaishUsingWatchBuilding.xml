@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- ***** Things that use JobDriver_WatchBuilding ***** -->
+
+	<!-- Browse somebody else's research notes (works, but I should restrict it to requiring Research as a capability, but I can't find a tag that allows that restriction) -->
+
+	<JoyGiverDef>
+		<defName>BrowseNotes</defName>
+		<giverClass>EnjoyWhereYouAre.JoyGiver_InteractBuildingInteractionCellUsingRelevantSkill</giverClass>
+		<baseChance>1.4</baseChance>
+		<thingDefs>
+			<li>SimpleResearchBench</li>
+			<li>HiTechResearchBench</li>
+		</thingDefs>
+		<jobDef>BrowseNotes</jobDef>
+		<joyKind>Study</joyKind>
+		<requiredCapacities>
+			<li>Sight</li>
+		</requiredCapacities>
+	</JoyGiverDef>
+
+	<JobDef>
+		<defName>BrowseNotes</defName>
+		<driverClass>JobDriver_WatchBuilding</driverClass>
+		<reportString>browsing research notes.</reportString>
+		<joyDuration>4000</joyDuration>
+		<joyMaxParticipants>1</joyMaxParticipants>
+		<joySkill>Research</joySkill>
+		<joyXpPerTick>0.004</joyXpPerTick>
+		<joyGainRate>1</joyGainRate>
+		<joyKind>Study</joyKind>
+	</JobDef>
+
+	<!-- Check the beer (does this work?) -->
+
+	<JoyGiverDef>
+		<defName>CheckBeer</defName>
+		<giverClass>EnjoyWhereYouAre.JoyGiver_WatchBuildingUsingRelevantSkill</giverClass>
+		<baseChance>1</baseChance>
+		<jobDef>CheckBeer</jobDef>
+		<joyKind>Chemical</joyKind>
+		<thingDefs>
+			<li>FermentingBarrel</li>
+		</thingDefs>
+	</JoyGiverDef>
+
+	<JobDef>
+		<defName>CheckBeer</defName>
+		<driverClass>JobDriver_WatchBuilding</driverClass>
+		<reportString>checking the progress of the beer.</reportString>
+		<joyDuration>4000</joyDuration>
+		<joyKind>Chemical</joyKind>
+		<joySkill>Cooking</joySkill>
+		<joyXpPerTick>0.004</joyXpPerTick>
+		<joyGainRate>1.2</joyGainRate>
+	</JobDef>
+
+
+	<!-- Check drug lab (does this work?) -->
+
+	<JoyGiverDef>
+		<defName>CheckDrugLab</defName>
+		<giverClass>EnjoyWhereYouAre.JoyGiver_InteractBuildingInteractionCellUsingRelevantSkill</giverClass>
+		<baseChance>1.4</baseChance>
+		<thingDefs>
+			<li>DrugLab</li>
+		</thingDefs>
+		<jobDef>CheckDrugLab</jobDef>
+		<joyKind>Chemical</joyKind>
+	</JoyGiverDef>
+
+	<JobDef>
+		<defName>CheckDrugLab</defName>
+		<driverClass>JobDriver_WatchBuilding</driverClass>
+		<reportString>Looking around the drug lab.</reportString>
+		<joyDuration>4000</joyDuration>
+		<joyMaxParticipants>1</joyMaxParticipants>
+		<joySkill>Crafting</joySkill>
+		<joyXpPerTick>0.004</joyXpPerTick>
+		<joyGainRate>1.2</joyGainRate>
+		<joyKind>Chemical</joyKind>
+	</JobDef>
+
+	<!-- Talk on the comms console (does this work?) -->
+
+	<JoyGiverDef>
+		<defName>TalkRadio</defName>
+		<giverClass>EnjoyWhereYouAre.JoyGiver_InteractBuildingInteractionCellUsingRelevantSkill</giverClass>
+		<baseChance>1.4</baseChance>
+		<thingDefs>
+			<li>CommsConsole</li>
+		</thingDefs>
+		<jobDef>TalkRadio</jobDef>
+		<joyKind>Social</joyKind>
+		<requiredCapacities>
+			<li>Hearing</li>
+			<li>Talking</li>
+		</requiredCapacities>
+	</JoyGiverDef>
+
+	<JobDef>
+		<defName>TalkRadio</defName>
+		<driverClass>JobDriver_WatchBuilding</driverClass>
+		<reportString>chatting on the comm channels.</reportString>
+		<joyDuration>4000</joyDuration>
+		<joyMaxParticipants>1</joyMaxParticipants>
+		<joySkill>Social</joySkill>
+		<joyXpPerTick>0.004</joyXpPerTick>
+		<joyGainRate>1.2</joyGainRate>
+		<joyKind>Social</joyKind>
+	</JobDef>
+
+</Defs>
