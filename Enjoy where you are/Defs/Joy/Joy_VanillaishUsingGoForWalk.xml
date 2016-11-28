@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!-- ***** Things that use JobDriver_GoForWalk ***** -->
+
+<!-- Core example
+
+  <JoyGiverDef>
+    <defName>GoForWalk</defName>
+    <giverClass>JoyGiver_GoForWalk</giverClass>
+    <baseChance>1</baseChance>
+    <jobDef>GoForWalk</jobDef>
+    <joyKind>Meditative</joyKind>
+  </JoyGiverDef>
+  
+    <JobDef>
+    <defName>GoForWalk</defName>
+    <driverClass>JobDriver_GoForWalk</driverClass>
+    <reportString>going for a walk.</reportString>
+    <joyDuration>8000</joyDuration>
+    <joyGainRate>1</joyGainRate>
+    <joyKind>Meditative</joyKind>
+  </JobDef>
+
+-->
+
+<!-- Chase bug. Does it work? Mostly putting something in this file. -->
+
+  <JoyGiverDef>
+    <defName>ChaseBug</defName>
+    <giverClass>JoyGiver_GoForWalk</giverClass>
+    <baseChance>1</baseChance>
+    <jobDef>ChaseBug</jobDef>
+    <joyKind>Study</joyKind>
+  </JoyGiverDef>
+  
+    <JobDef>
+    <defName>ChaseBug</defName>
+    <driverClass>JobDriver_GoForWalk</driverClass>
+    <reportString>following an alien bug.</reportString>
+    <joyDuration>8000</joyDuration>
+    <joyGainRate>1</joyGainRate>
+	<joySkill>Animals</joySkill>
+    <joyXpPerTick>0.004</joyXpPerTick>
+    <joyKind>Study</joyKind>
+  </JobDef>
+
+<!-- Patrolling the area. Does this work? -->  
+
+  <JoyGiverDef>
+    <defName>PatrolArea</defName>
+    <giverClass>JoyGiver_GoForWalk</giverClass>
+    <baseChance>1</baseChance>
+    <jobDef>PatrolArea</jobDef>
+    <joyKind>GamingDexterity</joyKind> <!-- Har har, but closest I could find to something military-ish -->
+  </JoyGiverDef>
+  
+    <JobDef>
+    <defName>PatrolArea</defName>
+    <driverClass>JobDriver_GoForWalk</driverClass>
+    <reportString>looking for trouble.</reportString>
+    <joyDuration>4000</joyDuration>
+    <joyGainRate>1</joyGainRate>
+	<alwaysShowWeapon>true</alwaysShowWeapon>
+    <joyKind>GamingDexterity</joyKind>
+  </JobDef>
+
+  
+</Defs>

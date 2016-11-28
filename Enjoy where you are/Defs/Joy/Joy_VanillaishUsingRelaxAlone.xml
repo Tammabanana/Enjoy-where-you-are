@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!-- ***** Things that use JobDriver_RelaxAlone ***** -->
+
+<!-- Core example
+
+  <JoyGiverDef>
+    <defName>Meditate</defName>
+    <giverClass>JoyGiver_InPrivateRoom</giverClass>
+    <baseChance>2</baseChance>
+    <pctPawnsEverDo>0.4</pctPawnsEverDo>
+    <jobDef>Meditate</jobDef>
+    <joyKind>Meditative</joyKind>
+  </JoyGiverDef>
+  
+    <JobDef>
+    <defName>Meditate</defName>
+    <driverClass>JobDriver_RelaxAlone</driverClass>
+    <reportString>meditating.</reportString>
+    <joyDuration>4000</joyDuration>
+    <joyGainRate>1</joyGainRate>
+    <joyKind>Meditative</joyKind>
+  </JobDef>
+
+-->
+
+<!-- Compose poem (Works!) -->
+
+  <JoyGiverDef>
+    <defName>ComposePoem</defName>
+    <giverClass>JoyGiver_InPrivateRoom</giverClass>
+    <baseChance>2</baseChance>
+    <pctPawnsEverDo>0.2</pctPawnsEverDo>
+    <jobDef>ComposePoem</jobDef>
+    <joyKind>Meditative</joyKind>
+  </JoyGiverDef>
+  
+  <JobDef>
+    <defName>ComposePoem</defName>
+    <driverClass>JobDriver_RelaxAlone</driverClass>
+    <reportString>composing an epic poem.</reportString>
+    <joyDuration>4000</joyDuration>
+	<joySkill>Artistic</joySkill>
+    <joyXpPerTick>0.004</joyXpPerTick>	
+    <joyGainRate>1</joyGainRate>
+    <joyKind>Meditative</joyKind>
+  </JobDef>
+  
+  
+<!-- Exercise (Works!) -->
+
+    <JoyGiverDef>
+    <defName>Exercise</defName>
+    <giverClass>JoyGiver_InPrivateRoom</giverClass>
+    <baseChance>2</baseChance>
+    <pctPawnsEverDo>0.2</pctPawnsEverDo>
+    <jobDef>Exercise</jobDef>
+    <joyKind>Meditative</joyKind>
+  </JoyGiverDef> 
+
+  <JobDef>
+    <defName>Exercise</defName>
+    <driverClass>JobDriver_RelaxAlone</driverClass>
+    <reportString>exercising.</reportString>
+    <joyDuration>4000</joyDuration>
+	<joySkill>Melee</joySkill>
+    <joyXpPerTick>0.004</joyXpPerTick>
+    <joyGainRate>1</joyGainRate>
+    <joyKind>Meditative</joyKind>
+  </JobDef>  
+
+<!-- Dancing (Works! Though "by HIMself" does not pull in an appropriate pronoun.) -->
+
+  <JoyGiverDef>
+    <defName>DanceInRoom</defName>
+    <giverClass>JoyGiver_InPrivateRoom</giverClass>
+    <baseChance>2</baseChance>
+    <pctPawnsEverDo>0.2</pctPawnsEverDo>
+    <jobDef>DanceInRoom</jobDef>
+    <joyKind>Meditative</joyKind>
+  </JoyGiverDef>
+  
+  <JobDef>
+    <defName>DanceInRoom</defName>
+    <driverClass>JobDriver_RelaxAlone</driverClass>
+    <reportString>dance break!</reportString>
+    <joyDuration>4000</joyDuration>
+	<joySkill>Artistic</joySkill>
+    <joyXpPerTick>0.004</joyXpPerTick>	
+    <joyGainRate>1</joyGainRate>
+    <joyKind>Meditative</joyKind>
+  </JobDef>
+
+  
+</Defs>

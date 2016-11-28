@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!-- Play cards (works) -->
+
+  <JoyGiverDef>
+    <defName>PlayCards</defName>
+    <giverClass>JoyGiver_InteractBuildingSitAdjacent</giverClass>
+    <baseChance>1.5</baseChance>
+    <thingDefs>
+      <li>CoffeeTable</li>
+	  <li>TableShort</li>
+	  <li>TableLong</li>
+    </thingDefs>
+    <jobDef>PlayCards</jobDef>
+    <joyKind>GamingCerebral</joyKind>
+    <requiredCapacities>
+      <li>Sight</li>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </JoyGiverDef>
+  
+  <JobDef>
+    <defName>PlayCards</defName>
+    <driverClass>JobDriver_SitFacingBuilding</driverClass>
+    <reportString>playing cards.</reportString>
+    <joyDuration>4000</joyDuration>
+    <joyMaxParticipants>4</joyMaxParticipants>
+    <joyGainRate>1</joyGainRate>
+    <joySkill>Research</joySkill>
+    <joyXpPerTick>0.002</joyXpPerTick>
+    <joyKind>GamingCerebral</joyKind>
+  </JobDef>  
+
+<!-- Play dice (works) -->
+
+  <JoyGiverDef>
+    <defName>PlayDice</defName>
+    <giverClass>JoyGiver_InteractBuildingSitAdjacent</giverClass>
+    <baseChance>1.5</baseChance>
+    <thingDefs>
+      <li>CoffeeTable</li>
+	  <li>TableShort</li>
+	  <li>TableLong</li>
+    </thingDefs>
+    <jobDef>PlayDice</jobDef>
+    <joyKind>GamingCerebral</joyKind>
+    <requiredCapacities>
+      <li>Sight</li>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </JoyGiverDef>
+  
+  <JobDef>
+    <defName>PlayDice</defName>
+    <driverClass>JobDriver_SitFacingBuilding</driverClass>
+    <reportString>playing dice.</reportString>
+    <joyDuration>4000</joyDuration>
+    <joyMaxParticipants>4</joyMaxParticipants>
+    <joyGainRate>1</joyGainRate>
+    <joySkill>Research</joySkill>
+    <joyXpPerTick>0.002</joyXpPerTick>
+    <joyKind>GamingCerebral</joyKind>
+  </JobDef>    
+  
+  
+<!-- Graffiti (works) -->
+  
+  <JoyGiverDef>
+    <defName>ScratchPicture</defName>
+    <giverClass>JoyGiver_InteractBuildingSitAdjacent</giverClass>
+    <baseChance>1.5</baseChance>
+    <thingDefs>
+      <li>CoffeeTable</li>
+	  <li>TableShort</li>
+	  <li>TableLong</li>
+    </thingDefs>
+    <jobDef>ScratchPicture</jobDef>
+    <joyKind>Lewd</joyKind>
+    <requiredCapacities>
+      <li>Sight</li>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </JoyGiverDef>
+  
+  <JobDef>
+    <defName>ScratchPicture</defName>
+    <driverClass>JobDriver_SitFacingBuilding</driverClass>
+    <reportString>scratching a dirty picture onto the table.</reportString>
+    <joyDuration>4000</joyDuration>
+    <joyMaxParticipants>2</joyMaxParticipants>
+    <joyGainRate>1</joyGainRate>
+    <joySkill>Artistic</joySkill>
+    <joyXpPerTick>0.002</joyXpPerTick>
+    <joyKind>Lewd</joyKind>
+  </JobDef>  
+  
+</Defs>

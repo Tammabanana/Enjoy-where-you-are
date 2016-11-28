@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!-- ***** Things that use JobDriver_StandAndBeSociallyActive ***** -->
+
+<!-- Core example of JobDef. No core examples of Joy using this driver.
+
+  <JobDef>
+		<defName>StandAndBeSociallyActive</defName>
+		<driverClass>JobDriver_StandAndBeSociallyActive</driverClass>
+		<reportString>relaxing socially.</reportString>
+	</JobDef>
+
+-->
+
+<!-- Sing (does this work?)(I don't think this works, they're just "Relaxing Socially" over and over again) -->
+
+  <JoyGiverDef>
+    <defName>SingBawdy</defName>
+    <giverClass>JoyGiver_SocialRelax</giverClass>
+    <baseChance>4</baseChance>
+    <joyKind>Lewd</joyKind>
+  </JoyGiverDef>  
+  
+  <JobDef>
+    <defName>SingBawdy</defName>
+    <driverClass>JobDriver_StandAndBeSociallyActive</driverClass>
+    <reportString>singing a bawdy drinking song. Loudly.</reportString>
+    <joyDuration>4000</joyDuration>
+    <joyGainRate>1</joyGainRate>
+    <joyKind>Lewd</joyKind>
+  </JobDef>  
+
+<!-- Epic poetry (does this work?)(I don't think this works, they're just "Relaxing Socially" over and over again) -->  
+  
+  <JoyGiverDef>
+    <defName>ReciteEpic</defName>
+    <giverClass>JoyGiver_SocialRelax</giverClass>
+    <baseChance>4</baseChance>
+    <joyKind>Social</joyKind>
+  </JoyGiverDef>    
+  
+  <JobDef>
+    <defName>ReciteEpic</defName>
+    <driverClass>JobDriver_StandAndBeSociallyActive</driverClass>
+    <reportString>reciting an epic poem about that one time...</reportString>
+    <joyDuration>4000</joyDuration>
+	<joySkill>Artistic</joySkill>
+    <joyXpPerTick>0.004</joyXpPerTick>	
+    <joyGainRate>1</joyGainRate>
+    <joyKind>Social</joyKind>
+  </JobDef>    
+
+
+</Defs>
