@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- ***** Things that use JobDriver_StandAndBeSociallyActive ***** -->
+
+	<!-- Epic poetry (does this work?)(I don't think this works, they're just "Relaxing Socially" over and over again) -->
+
+	<JoyGiverDef>
+		<defName>ReciteEpic</defName>
+		<giverClass>EnjoyWhereYouAre.JoyGiver_SocialRelaxUsingRelevantSkill</giverClass>
+		<baseChance>4</baseChance>
+		<joyKind>Social</joyKind>
+	</JoyGiverDef>
+
+	<JobDef>
+		<defName>ReciteEpic</defName>
+		<driverClass>JobDriver_StandAndBeSociallyActive</driverClass>
+		<reportString>reciting an epic poem about that one time...</reportString>
+		<joyDuration>4000</joyDuration>
+		<joySkill>Artistic</joySkill>
+		<joyXpPerTick>0.004</joyXpPerTick>
+		<joyGainRate>1</joyGainRate>
+		<joyKind>Social</joyKind>
+	</JobDef>
+
+</Defs>
