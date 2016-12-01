@@ -1,12 +1,10 @@
-using System;
 using RimWorld;
 using Verse;
 using Verse.AI;
-using System.Linq;
 
 namespace EnjoyWhereYouAre
 {
-	public class JoyGiver_WatchBuildingUsingRelevantSkill : JoyGiver_WatchBuilding
+    public class JoyGiver_WatchBuildingUsingRelevantSkill : JoyGiver_WatchBuilding
 	{
 		protected override Job TryGivePlayJob(Pawn pawn, Thing t)
 		{
@@ -17,9 +15,10 @@ namespace EnjoyWhereYouAre
 				return null;
 			}
 
-			//Add the pawn skill relevancy check, if any of the conditions match the job is null
-			if (pawn.story.DisabledWorkTypes.Any(type => type.relevantSkills.Any(skill => skill == this.def.jobDef.joySkill)) || pawn.story.DisabledWorkTags.Any(tag => tag == this.def.jobDef.joySkill.disablingWorkTags))
+			//Add the pawn skill relevancy check
+			if (pawn.skills.GetSkill(this.def.jobDef.joySkill).TotallyDisabled)
 			{
+				//If the skill is disabled, pawn won't do the activity
 				return null;
 			}
 

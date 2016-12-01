@@ -17,8 +17,8 @@ namespace EnjoyWhereYouAre
 		private static readonly int NumRadiusCells = GenRadial.NumCellsInRadius(3.9f);
 
 		private static readonly List<IntVec3> RadialPatternMiddleOutward = (from c in GenRadial.RadialPattern.Take(JoyGiver_SocialRelaxUsingRelevantSkill.NumRadiusCells)
-		orderby Mathf.Abs((c - IntVec3.Zero).LengthHorizontal - 1.95f)
-		select c).ToList<IntVec3>();
+																			orderby Mathf.Abs((c - IntVec3.Zero).LengthHorizontal - 1.95f)
+																			select c).ToList<IntVec3>();
 
 		private static List<ThingDef> nurseableDrugs = new List<ThingDef>();
 
@@ -34,13 +34,14 @@ namespace EnjoyWhereYouAre
 
 		private Job TryGiveJobInt(Pawn pawn, Predicate<CompGatherSpot> gatherSpotValidator)
 		{
-            //Add the pawn skill relevancy check, if any of the conditions match the job is null
-            if (pawn.story.DisabledWorkTypes.Any(type => type.relevantSkills.Any(skill => skill == this.def.jobDef.joySkill)) || pawn.story.DisabledWorkTags.Any(tag => tag == this.def.jobDef.joySkill.disablingWorkTags))
-            {
-                return null;
-            }
+			//Add the pawn skill relevancy check
+			if (pawn.skills.GetSkill(this.def.jobDef.joySkill).TotallyDisabled)
+			{
+				//If the skill is disabled, pawn won't do the activity
+				return null;
+			}
 
-            if (GatherSpotLister.activeSpots.Count == 0)
+			if (GatherSpotLister.activeSpots.Count == 0)
 			{
 				return null;
 			}
